@@ -73,8 +73,7 @@ resource "aws_lambda_permission" "allow_lambda_execution_from_logs" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.NetworkFirewallNotification.function_name
   principal     = "logs.${var.region}.amazonaws.com"
-  # source_arn    = aws_cloudwatch_log_group.networkfirewall_notification_cw_loggroup.arn
-  source_arn = "arn:aws:logs:${var.region}:${var.account_id}:log-group:/aws/network-firewall:*"
+  source_arn = "arn:aws:logs:${var.region}:${var.account_id}:log-group:${var.nf_loggroup}:*"
   source_account = var.account_id
 }
 

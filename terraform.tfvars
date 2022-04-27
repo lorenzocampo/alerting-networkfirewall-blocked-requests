@@ -10,3 +10,5 @@ ses_emails_recipients = {
     email1 = "receiver1@example.com"
     email2 = "receiver2@example.com"
 }
+
+nf_loggroup = "/aws/networkfirewall"

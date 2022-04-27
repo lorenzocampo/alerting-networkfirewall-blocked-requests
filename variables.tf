@@ -22,3 +22,8 @@ variable "ses_emails_recipients" {
   type = map
   description = "list of emails to receive notification emails"
 }
+
+variable "nf_loggroup" {
+  type = string
+  description = "your network firewall log group name"
+}
